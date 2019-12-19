@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
         <style type="text/css">
             /* Basic Reset */
@@ -19,7 +20,6 @@
             	border-radius: 50%;
             	height: 600px;
             	margin: auto;
-            	width: 600px;
             }
             h1 {
             	color: #495678;
@@ -112,10 +112,9 @@
 	<body>
         <div class="center">
             <h1>HTML CSS, JavaScript 计算器</h1>
-            <a href="https://github.com/guuibayer/simple-calculator" target="_blank"><i class="fa fa-github"></i></a>
             <form name="calculator">
                 <input type="button" id="clear" class="btn other" value="C">
-                <input type="text" id="display">
+                <input type="text" readonly="readonly" id="display">
                     <br>
                 <input type="button" class="btn number" value="7" onclick="get(this.value);">
                 <input type="button" class="btn number" value="8" onclick="get(this.value);">
