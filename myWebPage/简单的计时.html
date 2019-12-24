@@ -5,6 +5,9 @@
 		<title>简单的计时</title>
 	</head>
 	<body>
+		<span id="time">
+			
+		</span>
 		<p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
 		<button onclick="myFunction()">点我</button>
 		<script>
@@ -12,6 +15,12 @@
 				//setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。
 				setTimeout(function(){alert("Hello")},3000);
 			}
+			//setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+			var _time = document.getElementById('time')
+			setInterval(function(){
+				var date = new Date()
+				_time.innerHTML = date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日'+date.getHours()+'时'+date.getMinutes()+'分'+date.getSeconds()+'秒'+date.getMilliseconds()+'毫秒'
+			},1)
 		</script>
 	</body>
 </html>

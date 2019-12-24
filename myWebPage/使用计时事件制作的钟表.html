@@ -5,28 +5,42 @@
 		<title>使用计时事件制作的钟表</title>
 		<script>
 			function startTime(){
+				console.log(1)
 				var today=new Date();
 				var h=today.getHours();
 				var m=today.getMinutes();
-				var s=today.getSeconds();// 在小于10的数字前加一个‘0’
-				m=checkTime(m);
-				s=checkTime(s);
+				var s=today.getSeconds();
+				h=checkTime(h);
+				m=checkTime(m);// 在小于10的数字前加一个‘0’
+				s=checkTime(s);// 在小于10的数字前加一个‘0’
 				document.getElementById('txt').innerHTML=h+":"+m+":"+s;
 				//setTimeout() 是属于 window 的方法，该方法用于在指定的毫秒数后调用函数或计算表达式。
-				t=setTimeout(function(){startTime()},500);
+				// setTimeout(function(){startTime()},500);
+				// setInterval(function(){startTime()},5000);
 			}
+			
+			// 在小于10的数字前加一个‘0’
 			function checkTime(i){
 				if (i<10){
 					i="0" + i;
 				}
 				return i;
 			}
+			function start(){
+				console.log(22222)
+				setInterval(function(){
+					startTime()
+				},500);
+			}
 		</script>
 	</head>
 	
 	<!-- onload 事件会在页面或图像加载完成后立即发生。
 	onload 通常用于 <body> 元素，在页面完全载入后(包括图片、css文件等等。)执行脚本代码。 -->
-	<body onload="startTime()">
+	<body onload="start()">
 		<div id="txt"></div>
 	</body>
+	<!-- <script type="text/javascript">
+		document.body.onload = startTime()
+	</script> -->
 </html>

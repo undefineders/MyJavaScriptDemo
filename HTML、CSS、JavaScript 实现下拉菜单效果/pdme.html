@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实现下拉菜单效果</title>
+		<style type="text/css">
+			.x-row{
+			    overflow: hidden;
+			}
+			.x-row-cols{
+			    display: block;
+			    float: left;
+			    height: 100%;
+			}
+			.dr>.x-row-cols{
+			    display: block;
+			    float: right;
+			    height: 100%;
+			}
+			.x-row-cols:last-child{
+			    float: none;
+			}
+			.x-row-cols.last-child{
+			    float: none;
+			}
+			.x-row.boxflex{
+			    display: flex;
+			    display: -webkit-flex;
+			    float: none;
+			    flex-wrap: wrap;
+			    justify-content: space-between;
+			}
+			.boxflex .x-row-cols{
+			    display: block;
+			    flex: 1;
+			    float: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="x-row">
+			<div class="x-row-cols " style="width: 100px;">--100px--</div>
+			<div class="x-row-cols " style="width: 100px;">--100px--</div>
+			<div class="x-row-cols " style="width: 100px;">--100px--</div>
+			<div class="x-row-cols " style="width: 100px;">--100px--</div>
+			<div class="x-row-cols " style="width: 100px;">--100px--</div>
+			<div class="x-row-cols " style="margin-left:500px;">--auto--</div>
+		</div>
+		
+		<div class="x-row boxflex">
+			<div class="x-row-cols">boxflex</div>
+			<div class="x-row-cols">boxflex</div>
+			<div class="x-row-cols">boxflex</div>
+			<div class="x-row-cols">boxflex</div>
+			<div class="x-row-cols">boxflex</div>
+			<div class="x-row-cols">boxflex</div>
+		</div>
+	</body>
+</html>
